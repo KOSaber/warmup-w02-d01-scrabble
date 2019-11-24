@@ -74,7 +74,7 @@ var arr = cap.split("");
 //      console.log(arr[j]);
    if(arr[i]==obj[i][j]){
      //console.log("hi");
-   total += i;
+   total += Number(i) ;
 
 }
   }
