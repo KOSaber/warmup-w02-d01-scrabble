@@ -37,3 +37,54 @@ And to total:
 
 ## Double Check
 http://www.dvorkin.com/scrabscor.php
+
+// js
+
+// Letter                           Value
+// A, E, I, O, U, L, N, R, S, T       1
+// D, G                               2
+// B, C, M, P                         3
+// F, H, V, W, Y                      4
+// K                                  5
+// J, X                               8
+// Q, Z                               10
+
+ function calculate(word) {
+const obj = {
+  
+  1: ["A","E","I","O","U","L","N","R","S","T"],
+  2: ["D","G"],
+  3: ["B","C","M","P"],
+  4: ["F","H","V","W","Y"],
+  5: ["K"],
+  8: ["J","X"],
+  10: ["Q","Z"]
+  
+}
+
+var cap = word.toUpperCase();
+var arr = cap.split("");
+   var total =0;
+   
+// console.log(arr);
+   
+ for (let i in obj){
+   
+   for(j=0;j<obj[i].length;j++ ){
+//      console.log(arr[j]);
+   if(arr[i]==obj[i][j]){
+     //console.log("hi");
+   total += i;
+
+}
+  }
+   }
+  
+   console.log(total);
+}
+
+
+
+
+calculate ("cabbage");
+
